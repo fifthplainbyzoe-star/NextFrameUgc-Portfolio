@@ -89,12 +89,31 @@ function Nav() {
   );
 }
 
-function BlobImg({ className, gradient }: { className?: string; gradient: string }) {
+function BlobImg({
+  className,
+  gradient,
+  src,
+  alt,
+}: {
+  className?: string;
+  gradient?: string;
+  src?: string;
+  alt?: string;
+}) {
   return (
     <div
-      className={`rounded-[2rem] shadow-[0_20px_50px_-25px_rgba(120,60,40,0.25)] ${className ?? ""}`}
-      style={{ background: gradient }}
-    />
+      className={`overflow-hidden rounded-[2rem] shadow-[0_20px_50px_-25px_rgba(120,60,40,0.25)] ${className ?? ""}`}
+      style={src ? undefined : { background: gradient }}
+    >
+      {src && (
+        <img
+          src={src}
+          alt={alt ?? ""}
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      )}
+    </div>
   );
 }
 
