@@ -121,21 +121,25 @@ function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-16 md:py-28">
-        {/* decorative floating blobs */}
+        {/* decorative floating product images */}
         <BlobImg
-          gradient="linear-gradient(135deg,#f3d4d1,#e9a9a3)"
+          src={perfumeOne.url}
+          alt="Elegant perfume bottle"
           className="animate-float-1 absolute left-2 top-10 hidden h-56 w-56 rotate-[-6deg] md:block"
         />
         <BlobImg
-          gradient="linear-gradient(135deg,#f8d7d0,#f0b6b0)"
+          src={skincareOne.url}
+          alt="Luxury skincare set"
           className="animate-float-2 absolute right-4 top-32 hidden h-64 w-72 rotate-[6deg] md:block"
         />
         <BlobImg
-          gradient="linear-gradient(135deg,#ecd6c6,#d9b39a)"
+          src={skincareTwo.url}
+          alt="Premium skincare collection"
           className="animate-float-3 absolute left-12 bottom-8 hidden h-52 w-56 rotate-[4deg] lg:block"
         />
         <BlobImg
-          gradient="linear-gradient(135deg,#f2e4d8,#dcc4ae)"
+          src={perfumeTwo.url}
+          alt="Luxury rose perfume"
           className="animate-float-4 absolute right-10 bottom-2 hidden h-52 w-52 rotate-[-8deg] lg:block"
         />
 
