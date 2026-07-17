@@ -63,3 +63,38 @@
     letter-spacing: -0.01em;
   }
 }
+
+@keyframes drift {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -18px; }
+}
+
+@keyframes drift-reverse {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 14px; }
+}
+
+@keyframes float-scale {
+  0%, 100% { scale: 1; }
+  50% { scale: 1.03; }
+}
+
+.animate-float-1 {
+  animation: drift 9s ease-in-out infinite, float-scale 8s ease-in-out infinite;
+  will-change: translate, scale;
+}
+.animate-float-2 {
+  animation: drift-reverse 11s ease-in-out infinite, float-scale 7s ease-in-out infinite;
+  animation-delay: 1s, 0.5s;
+  will-change: translate, scale;
+}
+.animate-float-3 {
+  animation: drift 10s ease-in-out infinite, float-scale 9s ease-in-out infinite;
+  animation-delay: 2s, 1s;
+  will-change: translate, scale;
+}
+.animate-float-4 {
+  animation: drift-reverse 8s ease-in-out infinite, float-scale 10s ease-in-out infinite;
+  animation-delay: 0.5s, 1.5s;
+  will-change: translate, scale;
+}
