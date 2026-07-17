@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PortfolioVideoCard } from "@/components/PortfolioVideoCard";
+import perfumeOne from "@/assets/perfume-1.png.asset.json";
+import skincareOne from "@/assets/skincare-1.png.asset.json";
+import skincareTwo from "@/assets/skincare-2.png.asset.json";
+import perfumeTwo from "@/assets/perfume-2.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
