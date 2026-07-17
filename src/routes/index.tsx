@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
 const portfolio: { title: string; src?: string }[] = [
   { title: "Fragrance", src: "" },
   { title: "Coffee", src: "" },
-  { title: "Watch", src: "" },
+  { title: "Apparel", src: "" },
   { title: "Car", src: "" },
 ];
 
