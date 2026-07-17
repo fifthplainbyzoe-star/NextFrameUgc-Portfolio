@@ -10,9 +10,9 @@ export const Route = createFileRoute("/")({
 // or use a hosted URL. Leave src empty to show the play-overlay placeholder.
 const portfolio: { title: string; src?: string }[] = [
   { title: "Fragrance", src: "" },
-  { title: "Skincare", src: "" },
-  { title: "Beauty", src: "" },
-  { title: "Lifestyle", src: "" },
+  { title: "Coffee", src: "" },
+  { title: "Watch", src: "" },
+  { title: "Car", src: "" },
 ];
 
 const services = [
