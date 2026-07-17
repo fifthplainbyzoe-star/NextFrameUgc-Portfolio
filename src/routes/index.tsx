@@ -317,13 +317,25 @@ function Contact() {
             className="mt-8 space-y-5"
             onSubmit={(e) => {
               e.preventDefault();
+              const form = e.currentTarget;
+              const data = new FormData(form);
+              const name = String(data.get("name") ?? "").trim();
+              const email = String(data.get("email") ?? "").trim();
+              const message = String(data.get("message") ?? "").trim();
+              const subject = `New inquiry from ${name || "your portfolio"}`;
+              const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+              window.location.href = `mailto:nextframestudio.media@gmail.com?subject=${encodeURIComponent(
+                subject,
+              )}&body=${encodeURIComponent(body)}`;
             }}
           >
             <Field label="Name" name="name" />
             <Field label="Email" name="email" type="email" />
             <div>
-              <label className="mb-2 block text-sm text-muted-foreground">Message</label>
+              <label htmlFor="message" className="mb-2 block text-sm text-muted-foreground">Message</label>
               <textarea
+                id="message"
+                name="message"
                 rows={5}
                 className="w-full rounded-xl bg-background px-4 py-3 outline-none ring-1 ring-border focus:ring-2 focus:ring-ring"
               />
@@ -335,6 +347,7 @@ function Contact() {
               Send Message
             </button>
           </form>
+
         </div>
       </div>
     </section>
