@@ -266,9 +266,24 @@ function Contact() {
       <div className="mx-auto max-w-3xl">
         <h2 className="text-center font-serif text-3xl md:text-5xl">Let's Work Together</h2>
         <div className="mt-12 rounded-3xl bg-card p-8 shadow-sm md:p-12">
-          <div className="space-y-3 border-b border-border pb-6 text-sm md:text-base">
-            <div>✉ nextframestudio.media@gmail.com</div>
-            <div>💬 +27 63 459 5961</div>
+          <div className="space-y-4 border-b border-border pb-6 text-sm md:text-base">
+            <a
+              href="mailto:nextframestudio.media@gmail.com"
+              className="flex items-center gap-2 text-foreground transition hover:text-accent hover:underline"
+            >
+              <span aria-hidden="true">✉</span>
+              nextframestudio.media@gmail.com
+            </a>
+            <a
+              href="https://wa.me/27634595961?text=Hi%21%20I%20found%20your%20portfolio%20and%20I%27m%20interested%20in%20collaborating%20with%20you."
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:scale-[1.02] hover:shadow-md"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
+              Chat on WhatsApp
+            </a>
           </div>
           <form
             className="mt-8 space-y-5"
@@ -295,6 +310,19 @@ function Contact() {
         </div>
       </div>
     </section>
+  );
+}
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.702h-.004c-3.95 0-7.164 3.219-7.16 7.172.002 1.478.459 2.906 1.31 4.115l-1.395 4.054 4.146-1.092a7.166 7.166 0 0 0 3.431.879h.003c3.947 0 7.164-3.22 7.16-7.174-.003-3.952-3.221-7.172-7.174-7.172-.001 0-.002 0-.003 0" />
+    </svg>
   );
 }
 
